@@ -1,0 +1,543 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#include ""res\\KETI_Simulator.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\KETI_Simulator.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About KETI_Simulator"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "KETI_Simulator Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2009",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_KETI_SIMULATOR_DIALOG DIALOGEX 0, 0, 562, 263
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "OPRoS Simulator"
+MENU IDR_SIMULATOR_MENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",ID_MODEL_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,26,160,52
+    PUSHBUTTON      "Start Simulation",IDC_START_SIM_BTN,7,80,60,18
+    PUSHBUTTON      "Stop Simulation",IDC_STOP_SIM_BTN,67,80,60,18
+    EDITTEXT        IDC_LOG_EDIT,7,99,160,48,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    PUSHBUTTON      "Unload Model",IDC_UNLOAD_MODEL_BTN,357,215,6,6
+    PUSHBUTTON      "Clear",IDC_CLEAR_BTN,87,7,80,18
+    PUSHBUTTON      "Reset",IDC_RESET_BTN,127,80,40,18
+    PUSHBUTTON      "Open Model",IDC_OPEN_MODEL_BTN,7,7,80,18
+    CONTROL         "",IDC_APP_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,10,154,204,96
+    GROUPBOX        "OPRoS Engine",IDC_STATIC,7,147,209,106
+    GROUPBOX        "Engine State",IDC_STATIC,465,147,90,38
+    EDITTEXT        IDC_ENGINE_STATE,468,155,85,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "App Run List",IDC_STATIC,465,185,90,67
+    LISTBOX         IDC_APP_RUNLIST,468,194,85,55,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "OPRoS Engine Console Window",IDC_STATIC,218,147,246,106
+    EDITTEXT        IDC_OPRoS_CONSOLE,221,156,240,93,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL
+    PUSHBUTTON      "Start",IDC_ENGINE_START,468,169,42,14
+    PUSHBUTTON      "Exit",IDC_ENGINE_EXIT,511,169,42,14
+    CONTROL         "",IDC_TREE2,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_CHECKBOXES | WS_BORDER | WS_HSCROLL | WS_TABSTOP,172,16,90,127
+    CONTROL         "",IDC_DEBUGTAB,"SysTabControl32",TCS_BUTTONS | TCS_MULTILINE | 0x8,264,16,289,130,WS_EX_TRANSPARENT
+    GROUPBOX        "Simulator Debug",IDC_STATIC,169,7,386,141
+END
+
+IDD_OPEN_MODEL_DIALOG DIALOGEX 0, 0, 163, 137
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Open Model"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,24,115,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,91,115,50,14
+    EDITTEXT        IDC_EDIT1,37,8,118,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_OPEN_FILE_DLG,144,25,12,16
+    CTEXT           "Name",IDC_STATIC,7,11,25,13
+    CTEXT           "File",IDC_STATIC,7,27,25,13
+    EDITTEXT        IDC_FILE_NAME,37,25,103,14,ES_AUTOHSCROLL
+    GROUPBOX        "Position",IDC_STATIC,7,43,70,65
+    GROUPBOX        "Rotation",IDC_STATIC,85,43,70,65
+    EDITTEXT        IDC_POS_X,35,56,39,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_POS_Y,35,72,39,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_POS_Z,35,88,39,12,ES_AUTOHSCROLL
+    LTEXT           "x",IDC_STATIC,13,58,20,14
+    LTEXT           "y",IDC_STATIC,13,74,20,14
+    LTEXT           "z",IDC_STATIC,13,89,20,14
+    EDITTEXT        IDC_ROT_X,113,58,39,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ROT_Y,113,74,39,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ROT_Z,113,90,39,12,ES_AUTOHSCROLL
+    LTEXT           "x",IDC_STATIC,91,60,20,14
+    LTEXT           "y",IDC_STATIC,91,76,20,14
+    LTEXT           "z",IDC_STATIC,91,90,20,14
+END
+
+IDD_MANIPULATOR_OPRoS DIALOGEX 0, 0, 240, 159
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Manipulator Control - OPRoS Engine"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_SLIDER1,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,10,10,180,15
+    CONTROL         "",IDC_SLIDER2,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,10,30,180,15
+    CONTROL         "",IDC_SLIDER3,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,10,50,180,15
+    CONTROL         "",IDC_SLIDER4,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,10,70,180,15
+    CONTROL         "",IDC_SLIDER5,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,10,90,180,15
+    CONTROL         "",IDC_SLIDER6,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,10,110,180,15
+    EDITTEXT        IDC_EDIT1,190,10,40,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,190,30,40,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,190,50,40,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,190,70,40,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,190,90,40,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,190,110,40,14,ES_CENTER | ES_AUTOHSCROLL
+    GROUPBOX        "Angle Unit",IDC_STATIC,11,128,61,24
+    CONTROL         "DEG",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,15,138,23,10
+    CONTROL         "RAD",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,43,138,24,10
+    COMBOBOX        IDC_COMBO1,76,135,101,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Start",IDC_BUTTON1,183,134,50,14
+    LTEXT           "Application Profile",IDC_STATIC,78,125,58,8
+END
+
+IDD_WHEELCONTROL DIALOGEX 0, 0, 274, 165
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Wheel Robot Control - Simulator"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_ROBOTLIST,157,26,110,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO2,157,51,110,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO3,157,76,110,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Joystick",IDC_JOYSTICK,"Static",SS_SIMPLE | SS_NOPREFIX | SS_NOTIFY | SS_CENTERIMAGE | WS_GROUP,7,8,140,149
+    LTEXT           "Robot Name",IDC_ROBOTNAME,157,16,40,8
+    LTEXT           "LeftWheel DeviceName",IDC_LeftWheel,157,41,75,8
+    LTEXT           "RightWheel DeviceName",IDC_STATIC,157,66,79,8
+    LTEXT           "Forward Velocity",IDC_FORWARD,157,95,54,8
+    EDITTEXT        IDC_EDIT_FORWARD,217,93,50,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Angular Velocity",IDC_ANGULAR,157,110,52,8
+    EDITTEXT        IDC_EDIT_ANGULAR,217,108,50,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "Simulator Robot Control",IDC_SCONTROL,157,130,110,14
+END
+
+IDD_WHEELCONTROL_OPRoS DIALOGEX 0, 0, 155, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Robot Wheel Contorl - OPRoS Engine"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Static",IDC_JOYSTICK,"Static",SS_SIMPLE | SS_NOPREFIX | SS_NOTIFY | SS_CENTERIMAGE | WS_BORDER | WS_GROUP,8,7,140,140
+    LTEXT           "Forward\nVelocity",IDC_STATIC,9,157,27,16
+    LTEXT           "Angular\nVelocity",IDC_STATIC,81,157,25,16
+    EDITTEXT        IDC_EDIT1,38,159,35,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT2,110,160,35,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    COMBOBOX        IDC_COMBO1,7,179,102,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "START",IDC_START,112,178,35,14
+END
+
+IDD_MANIPULATOR DIALOGEX 0, 0, 316, 163
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ManipulatorControl - Simulator"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_SLIDER1,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,7,10,170,15
+    CONTROL         "",IDC_SLIDER2,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,7,30,170,15
+    CONTROL         "",IDC_SLIDER3,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,7,50,170,15
+    CONTROL         "",IDC_SLIDER4,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,7,70,170,15
+    CONTROL         "",IDC_SLIDER5,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,7,90,170,15
+    CONTROL         "",IDC_SLIDER6,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,7,110,170,15
+    EDITTEXT        IDC_EDIT1,180,10,40,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,180,30,40,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,180,50,40,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,180,70,40,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,180,90,40,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,180,110,40,14,ES_CENTER | ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO1,225,11,80,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO2,225,31,80,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO3,225,51,80,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO4,225,71,80,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO5,225,91,80,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO6,225,111,80,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Angle Unit",IDC_STATIC,7,130,74,26
+    CONTROL         "Deg",IDC_DEG,"Button",BS_AUTORADIOBUTTON,12,141,29,10
+    CONTROL         "Rad",IDC_RAD,"Button",BS_AUTORADIOBUTTON,50,141,29,10
+    COMBOBOX        IDC_COMBO8,88,137,105,28,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Simulatoin Robot Control",IDC_SCONTROL,199,136,110,14
+    LTEXT           "Robot Name",IDC_STATIC,89,128,40,8
+END
+
+IDD_PATH DIALOGEX 0, 0, 287, 118
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Simulator Setting"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "OPRoS Engine Path :",IDC_STATIC,15,15,68,8
+    LTEXT           "Repository Path :",IDC_STATIC,25,65,57,8
+    LTEXT           "Robot Model Path :",IDC_STATIC,20,81,62,8
+    EDITTEXT        IDC_EDIT1,84,13,172,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,84,63,172,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,84,79,172,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_ENGINEPATHBTN,257,13,19,26
+    PUSHBUTTON      "...",IDC_REPOSITORYBTN,257,63,19,14
+    PUSHBUTTON      "...",IDC_MODELBTN,257,79,19,14
+    PUSHBUTTON      "Save",IDC_BUTTON_SAVE,174,96,50,14
+    PUSHBUTTON      "OK",IDOK,230,96,50,14
+    LTEXT           "Engine Name : ",IDC_STATIC,36,29,67,8
+    EDITTEXT        IDC_EDIT4,84,27,172,14,ES_AUTOHSCROLL
+    LTEXT           "Device Port :",IDC_STATIC,39,97,42,8
+    EDITTEXT        IDC_EDIT5,84,95,51,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT6,84,41,172,14,ES_AUTOHSCROLL
+    LTEXT           "OPRoS Batch File : ",IDC_STATIC,23,43,62,8
+    PUSHBUTTON      "...",IDC_BATCHFILE,257,41,19,14
+END
+
+IDD_CONDITION_INPUT DIALOGEX 0, 0, 120, 63
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Condition Input"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,7,42,50,14
+    PUSHBUTTON      "취소",IDCANCEL,63,42,50,14
+    COMBOBOX        IDC_COMBO1,47,7,66,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Condition :",IDC_STATIC,7,9,36,8
+    LTEXT           "Value : ",IDC_STATIC,19,25,25,8
+    EDITTEXT        IDC_Value,47,23,66,14,ES_AUTOHSCROLL
+END
+
+IDD_VIEW4 DIALOGEX 0, 0, 286, 115
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_DEVICELIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,1,1,284,112
+END
+
+IDD_VIEW3 DIALOGEX 0, 0, 286, 115
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_DEVICELIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,1,1,284,112
+END
+
+IDD_VIEW2 DIALOGEX 0, 0, 286, 115
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_DEVICELIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,1,1,284,112
+END
+
+IDD_VIEW1 DIALOGEX 0, 0, 286, 115
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_DEVICELIST,"SysListView32",LVS_REPORT | LVS_EDITLABELS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,1,1,284,112
+END
+
+IDD_DEPTHVIEW DIALOGEX 0, 0, 221, 154
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_NOFAILCREATE | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Depth View"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Static",IDC_Depth,7,7,207,140
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "KETI_Simulator.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "KETI_Simulator.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_KETI_SIMULATOR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 555
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 253
+    END
+
+    IDD_OPEN_MODEL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 156
+        VERTGUIDE, 35
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+
+    IDD_MANIPULATOR_OPRoS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_WHEELCONTROL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 267
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_WHEELCONTROL_OPRoS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 148
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_MANIPULATOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 156
+    END
+
+    IDD_PATH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 280
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_CONDITION_INPUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 113
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_VIEW4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 279
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 108
+    END
+
+    IDD_VIEW3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 279
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 108
+    END
+
+    IDD_VIEW2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 279
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 108
+    END
+
+    IDD_VIEW1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 279
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 108
+    END
+
+    IDD_DEPTHVIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 214
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About KETI_Simulator..."
+END
+
+#endif    // 한국어 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 중립(시스템 기본값) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUSD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_SYS_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_SIMULATOR_MENU MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Path Setting",                ID_FILE_PATHSETTING
+    END
+    POPUP "Robot Control"
+    BEGIN
+        POPUP "Wheel Robot"
+        BEGIN
+            MENUITEM "Simulator Control",           ID_WHEELROBOT_SIMULATORCONTROL
+            MENUITEM "OPRoS Engine Control",        ID_WHEELROBOT_OPROSENGINECONTROL
+        END
+        POPUP "Manipulator"
+        BEGIN
+            MENUITEM "Simulator Control",           ID_MANIPULATOR_SIMULATORCONTROL
+            MENUITEM "OPRoS Engine Control",        ID_MANIPULATOR_OPROSENGINECONTROL
+        END
+    END
+END
+
+#endif    // 중립(시스템 기본값) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#pragma code_page(949)
+#include "res\KETI_Simulator.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
