@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<PATH>
+	<EnginePath>C:\Program Files\OPRoS\OPRoS_Robot\Bin</EnginePath>
+	<EngineName>ComponentEngine.exe</EngineName>
+	<BatchFile>run.bat</BatchFile>
+	<RepositoryPath>C:\Program Files\OPRoS\OPRoS_Robot\App</RepositoryPath>
+	<ModelPath>C:\Program Files\OPRoS\OPRoS_Simulator\Simulator\bin\models\customs</ModelPath>
+	<Port>5550</Port>
+</PATH>
